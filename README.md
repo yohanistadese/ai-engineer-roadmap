@@ -1,94 +1,65 @@
-````md
-# 🚀 AI Engineer — 3-Month Roadmap
+# AI Engineer — 3-Month Roadmap
 
-## 🎯 Goal
+A hands-on plan to become a confident **intermediate AI engineer in 3 months**, by learning core AI engineering skills and applying every one of them to real features inside **ProPhone**.
 
-Become a confident **Intermediate AI Engineer in 3 months** by learning the core AI engineering skills and applying each skill to real problems inside **ProPhone**.
+| | |
+|---|---|
+| **Time commitment** | 4 hrs/day |
+| **Split** | 20% learning · 80% building |
+| **Method** | Learn → Build → Integrate → Evaluate → Improve |
+| **Practice ground** | ProPhone (real CRM, real data) |
 
-**Time:** 4 hrs/day  
-**Learning:** 20%  
-**Building:** 80%  
-**Approach:** Learn → Build → Integrate → Evaluate → Improve
+> The goal is **not** to become a ProPhone specialist. ProPhone is simply the real-world environment where every AI skill gets practiced on live data and real product decisions.
 
-The goal is **not** to become a ProPhone specialist.
+## Table of Contents
 
-ProPhone is the real-world environment where the AI skills are practiced.
+- [Month 1 — Machine Learning + AI Data](#month-1--machine-learning--ai-data)
+- [Month 2 — LLM Engineering + RAG + AI Applications](#month-2--llm-engineering--rag--ai-applications)
+- [Month 3 — AI Agents + Automation + Production](#month-3--ai-agents--automation--production)
+- [Final 3-Month Skill Map](#final-3-month-skill-map)
+- [Final Technical Skills](#final-technical-skills)
+- [Daily 4-Hour System](#daily-4-hour-system)
+- [After 3 Months](#after-3-months)
 
 ---
 
-# 🧠 MONTH 1 — MACHINE LEARNING + AI DATA
+## Month 1 — Machine Learning + AI Data
 
-## Learn
+### Learn
+- Python for AI, NumPy, Pandas, data cleaning, feature engineering
+- Supervised learning — classification & regression
+- Train / validation / test splits, cross-validation, overfitting
+- Precision, recall, F1, ROC-AUC, PR-AUC
+- Feature importance and model serialization
+- FastAPI and PostgreSQL for ML data
 
-- Python for AI
-- NumPy
-- Pandas
-- Data cleaning
-- Feature engineering
-- Supervised learning
-- Classification
-- Regression
-- Train / validation / test
-- Cross-validation
-- Overfitting
-- Precision / Recall / F1
-- ROC-AUC / PR-AUC
-- Feature importance
-- Model serialization
-- FastAPI
-- PostgreSQL for ML data
+### Build
 
-## Build
+Create `ai-services/lead-intelligence/` using real ProPhone data: **Lead + LeadActivity + Campaign + CampaignRecipient**.
 
-Create:
-
-`ai-services/lead-intelligence/`
-
-Use ProPhone data:
-
-`Lead + LeadActivity + Campaign + CampaignRecipient`
-
-Build a real ML pipeline:
-
-`PostgreSQL → Dataset → Features → Training → Evaluation → Model → FastAPI → ProPhone`
+```
+PostgreSQL → Dataset → Features → Training → Evaluation → Model → FastAPI → ProPhone
+```
 
 The model should analyze:
-
-- Lead information
-- Lead source
-- Current stage
-- Activity history
-- Email engagement
-- Call activity
-- Campaign history
-- Time since last activity
+- Lead information, lead source, current stage
+- Activity history, email engagement, call activity
+- Campaign history and time since last activity
 - Previous outcomes
 
-Predict:
+**Predict:**
+- Conversion Probability
+- Lead Priority
+- Recommended Next Action
 
-`Conversion Probability`
+Don't stop at a single `leadScore` — the real goal is learning how to turn messy business data into useful ML features and prove the model actually works.
 
-`Lead Priority`
+### ProPhone Implementation — AI Lead Insights
 
-`Recommended Next Action`
-
-Do not only create a `leadScore`.
-
-The important part is learning how to transform messy business data into useful ML features and evaluate whether the model actually works.
-
-## ProPhone Implementation
-
-Add:
-
-**AI Lead Insights**
-
-Example:
-
-```text
+```
 Lead: ABC Towing
 
 Conversion Probability: 81%
-
 Priority: HIGH
 
 Important Signals:
@@ -96,99 +67,59 @@ Important Signals:
 - Recent activity
 - Similar leads converted successfully
 
-Recommended Action:
-Call today
-````
+Recommended Action: Call today
+```
 
-## Experience You Gain
+### Experience Gained
 
-By the end of Month 1 you should understand:
-
-`Data → Features → Model → Evaluation → Prediction → API → Product`
+```
+Data → Features → Model → Evaluation → Prediction → API → Product
+```
 
 ---
 
-# 🤖 MONTH 2 — LLM ENGINEERING + RAG + AI APPLICATIONS
+## Month 2 — LLM Engineering + RAG + AI Applications
 
-## Learn
+### Learn
+- LLM fundamentals — tokens, context windows, prompt engineering
+- System / user messages, structured outputs, JSON schemas
+- Function calling and tool calling
+- Embeddings, vector databases, and RAG
+- Chunking, retrieval, reranking, RAG & LLM evaluation
+- Streaming, token/cost tracking, hallucination handling, prompt injection basics
 
-* LLM fundamentals
-* Tokens
-* Context windows
-* Prompt engineering
-* System / user messages
-* Structured outputs
-* JSON schemas
-* Function calling
-* Tool calling
-* Embeddings
-* Vector databases
-* RAG
-* Chunking
-* Retrieval
-* Reranking
-* RAG evaluation
-* LLM evaluation
-* Streaming
-* Token/cost tracking
-* Hallucination handling
-* Prompt injection basics
+**Stack:** Python + FastAPI + PostgreSQL + pgvector + LLM API
 
-Use:
+### Build
 
-`Python + FastAPI + PostgreSQL + pgvector + LLM API`
+Create `ai-services/crm-ai/` — a real **ProPhone AI Knowledge Assistant**.
 
-## Build
-
-Create:
-
-`ai-services/crm-ai/`
-
-Build a real **ProPhone AI Knowledge Assistant**.
-
-Pipeline:
-
-`ProPhone Data → Chunking → Embeddings → pgvector → Retrieval → LLM → Structured Answer`
-
-The AI should understand:
-
-* Lead history
-* Lead notes
-* Activities
-* Campaign history
-* Email history
-* Call information
-* CRM documentation
-
-Users should be able to ask:
-
-```text
-"Why is this lead important?"
-
-"What happened with this lead?"
-
-"Summarize this lead."
-
-"Show me similar leads."
-
-"Why did this lead stop progressing?"
-
-"What should I know before calling this customer?"
+```
+ProPhone Data → Chunking → Embeddings → pgvector → Retrieval → LLM → Structured Answer
 ```
 
-## Learn Through Implementation
+The AI should understand:
+- Lead history, notes, and activities
+- Campaign and email history, call information
+- CRM documentation
 
-### RAG
+Users should be able to ask:
+- "Why is this lead important?"
+- "What happened with this lead?"
+- "Summarize this lead."
+- "Show me similar leads."
+- "Why did this lead stop progressing?"
+- "What should I know before calling this customer?"
 
-Store useful CRM knowledge in `pgvector`.
+### Learn Through Implementation
 
-Learn:
+**RAG** — store useful CRM knowledge in pgvector:
 
-`Embedding → Similarity Search → Retrieval → Context → LLM`
+```
+Embedding → Similarity Search → Retrieval → Context → LLM
+```
 
-### Structured Output
-
-Instead of returning random text:
+**Structured Output** — instead of free-form text, return structured JSON:
 
 ```json
 {
@@ -199,11 +130,9 @@ Instead of returning random text:
 }
 ```
 
-### Tool Calling
+**Tool Calling** — give the LLM controlled tools; the model decides what it needs:
 
-Give the LLM controlled tools such as:
-
-```text
+```
 getLead()
 getActivities()
 getEmailHistory()
@@ -211,120 +140,63 @@ getCampaignHistory()
 searchSimilarLeads()
 ```
 
-The model decides which information it needs.
+### ProPhone Implementation — Ask ProPhone AI / AI Lead Summary
 
-## ProPhone Implementation
-
-Add:
-
-**Ask ProPhone AI**
-
-and:
-
-**AI Lead Summary**
-
-Example:
-
-```text
-User:
-"Prepare me for this call."
+```
+User: "Prepare me for this call."
 
 AI:
 Customer: ABC Towing
-
 Current Stage: Qualified
 
-Summary:
-...
+Summary: ...
+Important History: ...
+Previous Communication: ...
+Potential Concerns: ...
+Recommended Talking Points: ...
 
-Important History:
-...
-
-Previous Communication:
-...
-
-Potential Concerns:
-...
-
-Recommended Talking Points:
-...
-
-Recommended Next Action:
-Call today
+Recommended Next Action: Call today
 ```
 
-## Experience You Gain
+### Experience Gained
 
-By the end of Month 2 you should understand:
+```
+LLM → Tools → RAG → Retrieval → Structured Output → AI Application
+```
 
-`LLM → Tools → RAG → Retrieval → Structured Output → AI Application`
-
-You should be able to build an LLM application from scratch without depending entirely on an AI framework.
+By the end of Month 2 you should be able to build an LLM application from scratch without depending entirely on a framework.
 
 ---
 
-# 🧠 MONTH 3 — AI AGENTS + AUTOMATION + PRODUCTION
+## Month 3 — AI Agents + Automation + Production
 
-## Learn
+### Learn
+- Agent architecture — state, tool orchestration, multi-step workflows, planning, memory
+- Human-in-the-loop, guardrails, agent evaluation, AI security
+- Async Python, Redis, background jobs, queues, Docker
+- Logging, monitoring, error handling, AI cost optimization
+- n8n, Dify, and production AI architecture
 
-* AI agent architecture
-* Agent state
-* Tool orchestration
-* Multi-step workflows
-* Planning
-* Memory
-* Human-in-the-loop
-* Guardrails
-* Agent evaluation
-* AI security
-* Async Python
-* Redis
-* Background jobs
-* Queues
-* Docker
-* Logging
-* Monitoring
-* Error handling
-* AI cost optimization
-* n8n
-* Dify
-* Production AI architecture
+### Build
 
-## Build
+Create `ai-services/sales-copilot/`, combining Month 1 and Month 2 into one system.
 
-Create:
-
-`ai-services/sales-copilot/`
-
-Combine Month 1 and Month 2.
-
-Architecture:
-
-```text
+```
 Lead
- ↓
-ML Intelligence
- ↓
-CRM Knowledge
- ↓
-LLM
- ↓
-Tools
- ↓
-Agent
- ↓
-Recommendation
- ↓
-Human Approval
- ↓
-Action
- ↓
-Outcome
+ → ML Intelligence
+ → CRM Knowledge
+ → LLM
+ → Tools
+ → Agent
+ → Recommendation
+ → Human Approval
+ → Action
+ → Outcome
 ```
 
 Give the agent controlled tools:
 
-```text
+```
 getLead()
 getActivities()
 getLeadScore()
@@ -336,103 +208,55 @@ recommendNextAction()
 createTask()
 ```
 
-The agent should answer:
+The agent should answer: **"What should I do with this lead?"**
 
-**"What should I do with this lead?"**
-
-Example:
-
-```text
+```
 🔥 HIGH PRIORITY
 
 Conversion Probability: 82%
-
 Current Stage: CONTACTED
 
 Analysis:
-The lead opened the last 2 emails
-and clicked the pricing link.
+The lead opened the last 2 emails and clicked the pricing link.
 
 Risk:
 No salesperson activity for 4 days.
 
-Recommended Action:
-Call today.
+Recommended Action: Call today.
+Suggested Call Script: ...
+Suggested Follow-up Email: ...
 
-Suggested Call Script:
-...
-
-Suggested Follow-up Email:
-...
-
-[Approve]
-[Edit]
-[Reject]
+[Approve]  [Edit]  [Reject]
 ```
 
-## Automation
+### Automation
 
 Use **n8n** for real workflows:
 
-```text
-New Lead
- ↓
-AI Analysis
- ↓
-High Priority?
- ↓
-Notify Salesperson
+```
+New Lead → AI Analysis → High Priority? → Notify Salesperson
 ```
 
-```text
-Email Click
- ↓
-AI Re-analysis
- ↓
-Update Recommendation
- ↓
-Create Sales Task
+```
+Email Click → AI Re-analysis → Update Recommendation → Create Sales Task
 ```
 
-Use **Dify** where it makes sense for rapid AI workflow/prototype development.
+Use **Dify** where it speeds up rapid AI workflow prototyping. Learn *why and when* to reach for a custom Python AI service vs. Dify vs. n8n — don't default to automation tools for everything.
 
-Learn why and when to use:
+### Production Engineering
 
-`Custom Python AI Service vs Dify vs n8n`
+- Docker & environment configuration
+- API authentication
+- Async processing & Redis
+- Logging, error handling, retry handling, rate limiting
+- Cost tracking, latency tracking, AI evaluation, model/prompt versioning
 
-Do not blindly use automation tools for everything.
+### ProPhone Implementation — AI Sales Copilot
 
-## Production Engineering
-
-Make the AI service production-ready:
-
-* Docker
-* Environment configuration
-* API authentication
-* Async processing
-* Redis
-* Logging
-* Error handling
-* Retry handling
-* Rate limiting
-* Cost tracking
-* Latency tracking
-* AI evaluation
-* Model/prompt versioning
-
-## ProPhone Implementation
-
-Add:
-
-**AI Sales Copilot**
-
-The salesperson sees:
-
-```text
+```
 Today's AI Sales Plan
 
 🔥 8 High Priority Leads
-
 📞 5 Recommended Calls
 ✉️ 3 Recommended Follow-ups
 ⚠️ 2 Leads At Risk
@@ -442,173 +266,77 @@ Today's AI Sales Plan
 
 Important actions remain human-approved until the system is proven reliable.
 
-## Experience You Gain
+### Experience Gained
 
-By the end of Month 3 you should understand:
-
-`ML + LLM + RAG + Tools + Agents + Automation + APIs + Production`
-
-You should be able to design and build an AI feature from:
-
-`Business Problem → Data → AI Architecture → Model/LLM → Backend → Integration → Evaluation → Production`
-
----
-
-# 🏆 FINAL 3-MONTH SKILL MAP
-
-```text
-MONTH 1
-MACHINE LEARNING
-        ↓
-Data
-Features
-Models
-Evaluation
-Prediction
-APIs
-        ↓
-REAL PROPHONE ML FEATURE
-
-
-MONTH 2
-LLM ENGINEERING
-        ↓
-LLMs
-Embeddings
-RAG
-pgvector
-Tools
-Structured Output
-Evaluation
-        ↓
-REAL PROPHONE AI ASSISTANT
-
-
-MONTH 3
-AI ENGINEERING
-        ↓
-Agents
-Automation
-n8n
-Dify
-Redis
-Async
-Production
-Evaluation
-Security
-        ↓
-REAL PROPHONE AI SALES COPILOT
+```
+ML + LLM + RAG + Tools + Agents + Automation + APIs + Production
 ```
 
 ---
 
-# 🧩 FINAL TECHNICAL SKILLS
+## Final 3-Month Skill Map
 
-## Machine Learning
-
-`Python · NumPy · Pandas · Scikit-learn · Feature Engineering · Model Evaluation`
-
-## Deep Learning
-
-`PyTorch · Neural Networks · Embeddings · Transformers`
-
-## LLM Engineering
-
-`LLMs · Prompting · Structured Output · Function Calling · Tool Calling`
-
-## RAG
-
-`Embeddings · pgvector · Chunking · Retrieval · Reranking · RAG Evaluation`
-
-## AI Agents
-
-`Agents · State · Tools · Memory · Workflows · Guardrails · Human-in-the-Loop`
-
-## Backend
-
-`FastAPI · PostgreSQL · Redis · Async Python · REST APIs`
-
-## Production
-
-`Docker · Logging · Monitoring · Cost Tracking · Rate Limiting · Security`
-
-## Automation
-
-`n8n · Dify · Webhooks · Event-Driven Workflows`
-
-## Existing Engineering
-
-`Node.js · React · Git · System Design`
+| Month 1 | Month 2 | Month 3 |
+|---|---|---|
+| **Machine Learning** | **LLM Engineering** | **AI Engineering** |
+| Data · Features · Models · Evaluation · Prediction · APIs | LLMs · Embeddings · RAG · pgvector · Tools · Structured Output | Agents · Automation · n8n · Dify · Redis · Async · Production |
+| → Real ProPhone ML Feature | → Real ProPhone AI Assistant | → Real ProPhone AI Sales Copilot |
 
 ---
 
-# ⏱️ DAILY 4-HOUR SYSTEM
+## Final Technical Skills
 
-```text
-1 Hour
-Learn the concept
+| Category | Skills |
+|---|---|
+| **Machine Learning** | Python · NumPy · Pandas · Scikit-learn · Feature Engineering · Model Evaluation |
+| **Deep Learning** | PyTorch · Neural Networks · Embeddings · Transformers |
+| **LLM Engineering** | LLMs · Prompting · Structured Output · Function Calling · Tool Calling |
+| **RAG** | Embeddings · pgvector · Chunking · Retrieval · Reranking · RAG Evaluation |
+| **AI Agents** | Agents · State · Tools · Memory · Workflows · Guardrails · Human-in-the-Loop |
+| **Backend** | FastAPI · PostgreSQL · Redis · Async Python · REST APIs |
+| **Production** | Docker · Logging · Monitoring · Cost Tracking · Rate Limiting · Security |
+| **Automation** | n8n · Dify · Webhooks · Event-Driven Workflows |
+| **Existing Engineering** | Node.js · React · Git · System Design |
 
-3 Hours
-Implement it in ProPhone
+---
 
+## Daily 4-Hour System
+
+```
+1 hour  → Learn the concept
+3 hours → Implement it in ProPhone
+```
+
+```
 Every feature:
-Learn
- ↓
-Build locally
- ↓
-Test
- ↓
-Integrate with ProPhone
- ↓
-Evaluate
- ↓
-Improve
- ↓
-Document
+Learn → Build locally → Test → Integrate with ProPhone → Evaluate → Improve → Document
 ```
 
-Do not spend the entire month watching courses.
+Don't spend the whole month watching courses, and don't let AI generate the entire project without understanding it. Use AI coding tools to move faster — but always be able to answer:
 
-Do not let AI generate the entire project without understanding it.
-
-Use AI coding tools to move faster, but you must understand:
-
-`Why it works`
-
-`How it works`
-
-`What can fail`
-
-`How to evaluate it`
-
-`How to improve it`
+- *Why it works*
+- *How it works*
+- *What can fail*
+- *How to evaluate it*
+- *How to improve it*
 
 ---
 
-# 🎯 AFTER 3 MONTHS
+## After 3 Months
 
 You should be able to confidently build:
 
-```text
-ML Models
-LLM Applications
-RAG Systems
-AI APIs
-AI Agents
-Tool-Calling Systems
-AI Automation
-Production AI Services
-```
+- ML Models
+- LLM Applications
+- RAG Systems
+- AI APIs
+- AI Agents
+- Tool-Calling Systems
+- AI Automation
+- Production AI Services
 
-And you should have one strong real-world portfolio story:
+And you'll have one strong real-world portfolio story:
 
-> **I built and integrated an AI system into a production CRM that uses machine learning, LLMs, RAG, tool calling, agents, and workflow automation to analyze leads, understand CRM data, recommend sales actions, and assist salespeople.**
+> "I built and integrated an AI system into a production CRM that uses machine learning, LLMs, RAG, tool calling, agents, and workflow automation to analyze leads, understand CRM data, recommend sales actions, and assist salespeople."
 
-That is the target.
-
-**Not simply "I learned AI."**
-
-**You become an engineer who can build and ship AI systems.**
-
-```
-```
+**Not simply "I learned AI." — You become an engineer who can build and ship AI systems.**
