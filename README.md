@@ -2,16 +2,16 @@
 
 ## 🎯 Goal
 
-Become a job-ready AI Engineer by combining existing Backend Engineering experience with:
+Become a job-ready AI Engineer by combining:
 
-- Machine Learning
-- Deep Learning
-- LLM Engineering
-- AI Agents
-- Production AI
-- AI System Design
+Backend Engineering
++ Machine Learning
++ Deep Learning
++ LLM Engineering
++ AI Agents
++ Production AI
 
-Starting point:
+Starting Point:
 
 Backend Engineering + RAG Experience
 
@@ -38,26 +38,43 @@ AI Engineer / Applied AI Engineer
 
 ### Email Spam Detection API
 
-Build a real spam classifier that:
+Build:
 
-- Trains on a real dataset
-- Predicts spam / not spam
-- Returns confidence score
-- Exposes predictions through FastAPI
-- Includes model evaluation
-- Includes tests
-- Runs with Docker
+Dataset
+→ Data Processing
+→ ML Model
+→ Evaluation
+→ FastAPI
+→ Docker
 
-## Top 3 Resources
+The API should:
 
-1. **Andrew Ng — Machine Learning Specialization**
-   https://www.coursera.org/specializations/machine-learning-introduction
+- Predict spam / not spam
+- Return confidence score
+- Show model metrics
+- Include tests
 
-2. **Hands-On Machine Learning — Aurélien Géron**
-   https://github.com/ageron/handson-ml3
+## Resources
 
-3. **Scikit-learn User Guide**
-   https://scikit-learn.org/stable/user_guide.html
+### 🎥 Video
+
+**StatQuest — Machine Learning**
+
+https://www.youtube.com/@statquest
+
+Focus on:
+- Regression
+- Classification
+- Decision Trees
+- Random Forest
+- Gradient Boosting
+- Model Evaluation
+
+### 📚 Free Reference
+
+**Scikit-learn User Guide**
+
+https://scikit-learn.org/stable/user_guide.html
 
 ---
 
@@ -70,7 +87,7 @@ Build a real spam classifier that:
 - Tensors
 - Backpropagation
 - Optimizers
-- Training loops
+- Training
 - Embeddings
 - Attention
 - Transformers
@@ -86,20 +103,24 @@ Build a system that:
 - Detects intent
 - Assigns priority
 - Uses a transformer model
-- Evaluates model performance
-- Provides predictions through FastAPI
-- Runs with Docker
+- Evaluates performance
+- Provides a FastAPI endpoint
 
-## Top 3 Resources
+## Resources
 
-1. **Andrej Karpathy — Neural Networks: Zero to Hero**
-   https://github.com/karpathy/nn-zero-to-hero
+### 🎥 Video
 
-2. **PyTorch Tutorials**
-   https://pytorch.org/tutorials/
+**Andrej Karpathy — Neural Networks: Zero to Hero**
 
-3. **Dive into Deep Learning**
-   https://d2l.ai/
+https://www.youtube.com/@AndrejKarpathy
+
+Follow the series from the beginning.
+
+### 📚 Free Reference
+
+**PyTorch Tutorials**
+
+https://pytorch.org/tutorials/
 
 ---
 
@@ -107,7 +128,7 @@ Build a system that:
 
 ## Core
 
-You already know RAG, so don't spend this month relearning basic RAG.
+You already know RAG, so skip basic RAG tutorials.
 
 Focus on:
 
@@ -130,29 +151,46 @@ Focus on:
 
 ### AI Customer Support Assistant
 
-Build an LLM system that:
+Build:
 
-- Understands customer questions
-- Uses company knowledge
-- Calls backend tools
-- Produces structured responses
-- Streams responses
-- Tracks token usage
-- Tracks cost
-- Tracks latency
-- Evaluates answer quality
-- Handles failures safely
+User
+→ LLM
+→ Company Knowledge
+→ Tools
+→ Backend APIs
+→ Structured Response
 
-## Top 3 Resources
+Include:
 
-1. **Full Stack Deep Learning — LLM Bootcamp**
-   https://fullstackdeeplearning.com/llm-bootcamp/
+- Streaming
+- Tool calling
+- Structured output
+- Cost tracking
+- Latency tracking
+- Evaluation
+- Error handling
 
-2. **Hugging Face Course**
-   https://huggingface.co/learn
+## Resources
 
-3. **Andrej Karpathy — Intro to Large Language Models**
-   https://www.youtube.com/watch?v=zjkBMFhNj_g
+### 🎥 Video
+
+**Full Stack Deep Learning — LLM Bootcamp**
+
+https://fullstackdeeplearning.com/llm-bootcamp/
+
+### 📚 Free Reference
+
+**Hugging Face Course**
+
+https://huggingface.co/learn
+
+Focus on:
+
+- Transformers
+- Tokenizers
+- Datasets
+- Fine-tuning
+- LLM ecosystem
 
 ---
 
@@ -177,17 +215,17 @@ Build an LLM system that:
 
 ### AI Sales Agent
 
-Build an agent that:
+Build an agent that can:
 
-- Understands customer requirements
-- Searches products
-- Compares products
-- Checks availability
-- Uses CRM tools
-- Qualifies leads
-- Creates follow-up tasks
-- Handles objections
-- Hands difficult cases to humans
+- Understand customer requirements
+- Search products
+- Compare products
+- Check availability
+- Call CRM APIs
+- Qualify leads
+- Create follow-up tasks
+- Handle objections
+- Escalate to humans
 
 Example:
 
@@ -198,18 +236,22 @@ Customer
 → CRM
 → Lead Qualification
 → Follow-up
-→ Human Handoff
 
-## Top 3 Resources
+## Resources
 
-1. **Hugging Face — AI Agents Course**
-   https://huggingface.co/learn/agents-course
+### 🎥 Video
 
-2. **LangGraph Documentation**
-   https://langchain-ai.github.io/langgraph/
+**DeepLearning.AI — AI Agents**
 
-3. **Anthropic — Building Effective Agents**
-   https://www.anthropic.com/research/building-effective-agents
+https://www.youtube.com/@DeepLearningAI
+
+Search for their free AI agent courses and tutorials.
+
+### 📚 Free Reference
+
+**Hugging Face Agents Course**
+
+https://huggingface.co/learn/agents-course
 
 ---
 
@@ -226,7 +268,6 @@ Customer
 - Caching
 - Rate limiting
 - Retry strategies
-- Idempotency
 - Docker
 - AWS basics
 - Monitoring
@@ -239,24 +280,10 @@ Customer
 
 ### AI Model Serving Platform
 
-Build a platform that:
-
-- Deploys AI models
-- Provides inference APIs
-- Supports multiple models
-- Uses queues
-- Handles concurrent requests
-- Supports streaming
-- Measures latency
-- Measures throughput
-- Tracks model usage
-- Tracks cost
-- Provides monitoring
-
-Architecture:
+Build:
 
 Client
-→ API Gateway
+→ API
 → Authentication
 → Rate Limiter
 → Queue
@@ -264,16 +291,44 @@ Client
 → Model
 → Response
 
-## Top 3 Resources
+Measure:
 
-1. **Full Stack Deep Learning**
-   https://fullstackdeeplearning.com/
+- P50 latency
+- P95 latency
+- P99 latency
+- Throughput
+- Error rate
+- Model usage
+- Cost
 
-2. **Designing Data-Intensive Applications**
-   https://dataintensive.net/
+## Resources
 
-3. **AWS Well-Architected Framework**
-   https://aws.amazon.com/architecture/well-architected/
+### 🎥 Video
+
+**Full Stack Deep Learning — Full Course**
+
+https://fullstackdeeplearning.com/
+
+Focus on:
+
+- Deployment
+- Infrastructure
+- Monitoring
+- Testing
+- Production AI
+
+### 📚 Free Reference
+
+**AWS Well-Architected Framework**
+
+https://aws.amazon.com/architecture/well-architected/
+
+Focus on:
+
+- Reliability
+- Performance
+- Security
+- Cost optimization
 
 ---
 
@@ -289,23 +344,18 @@ Client
 - LinkedIn
 - Networking
 - Job applications
-- Technical communication
 
 ## Project
 
 ### Production AI Portfolio
 
-Choose your strongest 2–3 projects and make them production-quality.
+Choose your strongest 2–3 projects:
 
-1. Email Spam Detection API
-2. Customer Support Ticket Classifier
-3. AI Customer Support Assistant
-4. AI Sales Agent
-5. AI Model Serving Platform
+1. AI Customer Support Assistant
+2. AI Sales Agent
+3. AI Model Serving Platform
 
-You don't need to present all 5 equally.
-
-Your strongest portfolio should focus on **2–3 excellent projects**.
+Make them production-quality.
 
 Each project should have:
 
@@ -319,77 +369,47 @@ Each project should have:
 - Deployment
 - Technical trade-offs
 
-## Top 3 Resources
+## Resources
 
-1. **System Design Primer**
-   https://github.com/donnemartin/system-design-primer
+### 🎥 Video
 
-2. **NeetCode**
-   https://neetcode.io/
+**System Design — NeetCode**
 
-3. **Full Stack Deep Learning**
-   https://fullstackdeeplearning.com/
+https://www.youtube.com/@NeetCode
 
----
+Focus on system design and interview preparation.
 
-# Core Stack
+### 📚 Free Reference
 
-## Programming
+**System Design Primer**
 
-Python
-TypeScript
-
-## Backend
-
-FastAPI
-PostgreSQL
-Redis
-REST APIs
-Async Programming
-
-## Machine Learning
-
-NumPy
-Pandas
-Scikit-learn
-PyTorch
-
-## AI
-
-Hugging Face
-Transformers
-LLMs
-RAG
-AI Agents
-Tool Calling
-LLM Evaluation
-
-## Infrastructure
-
-Docker
-AWS
-Queues
-Monitoring
-Observability
-
-## Engineering
-
-Git
-Testing
-System Design
-CI/CD
+https://github.com/donnemartin/system-design-primer
 
 ---
 
-# Job Strategy
+# ⏰ Daily Schedule
 
-Don't wait until Month 6.
+4 hours/day:
+
+2 hours → Video / Learning
+
+1.5 hours → Project
+
+30 minutes → Coding / Review
+
+Don't spend the whole day watching videos.
+
+---
+
+# 💼 Start Applying
+
+Do NOT wait until Month 6.
 
 Month 1–2
 → Learn + Build
 
 Month 3
-→ Finish first serious AI project
+→ First serious AI project
 → Start applying
 
 Month 4
@@ -399,11 +419,11 @@ Month 5
 → Build + Apply + Interview
 
 Month 6
-→ Portfolio + Interview + Apply aggressively
+→ Portfolio + Interview + Apply
 
 ---
 
-# Target Roles
+# 🎯 Target Roles
 
 - AI Engineer
 - Applied AI Engineer
@@ -415,13 +435,35 @@ Month 6
 
 ---
 
-# Final Goal
+# 🧠 Final Skill Stack
+
+Python
+FastAPI
+PostgreSQL
+Redis
+Scikit-learn
+PyTorch
+Transformers
+Hugging Face
+LLMs
+RAG
+AI Agents
+Docker
+AWS
+System Design
+AI Evaluation
+
+---
+
+# 🚀 Goal
 
 Backend Engineer
         ↓
 Backend + RAG
         ↓
-ML + Deep Learning
+Machine Learning
+        ↓
+Deep Learning
         ↓
 LLM Engineering
         ↓
@@ -430,16 +472,3 @@ AI Agents
 Production AI
         ↓
 AI Engineer
-
-# 🔥 Rule
-
-Don't try to learn everything.
-
-Learn
-→ Build
-→ Measure
-→ Document
-→ Apply
-→ Interview
-→ Find gaps
-→ Improve
